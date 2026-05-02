@@ -1,5 +1,7 @@
 # 💻 Portfólio - Eduardo Ciudad
 
+![Preview do Portfólio](assets/img/preview.png)
+
 Portfólio profissional desenvolvido para apresentar meus projetos, habilidades e experiências como desenvolvedor backend.
 
 👉 Acesse o site:
