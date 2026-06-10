@@ -592,6 +592,19 @@ a  { text-decoration: none; color: inherit; }
   border-color: rgba(124,58,237,.38);
   box-shadow: 0 0 20px rgba(124,58,237,.18);
 }
+
+.project-card.featured {
+  grid-column: span 2;
+  background: rgba(13,13,28,.85);
+  border-color: rgba(124,58,237,.22);
+}
+
+/* StudyMind e E-commerce ficam juntos numa linha de 2 colunas cada */
+.projects-grid .project-card.featured:nth-of-type(2),
+.projects-grid .project-card.featured:last-of-type {
+  grid-column: span 2;
+}
+
 .project-links { display: flex; gap: 8px; }
 .project-link {
   width: 34px; height: 34px;
