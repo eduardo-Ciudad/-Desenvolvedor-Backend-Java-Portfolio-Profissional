@@ -573,7 +573,11 @@ a  { text-decoration: none; color: inherit; }
   border-radius: 50px;
   font-size: .7rem; color: var(--purple-light); font-weight: 600; letter-spacing: .05em;
 }
-.project-badge.in-dev  { background: rgba(34,197,94,.1); border-color: rgba(34,197,94,.2); color: #4ade80; }
+.project-links {
+  position: absolute; top: 52px; right: 18px;
+  display: flex; flex-direction: column; gap: 6px;
+}
+.project-badge.in-dev  {  background: rgba(96,165,250,.1); border-color: rgba(96,165,250,.2); color: #93c5fd; }
 .project-badge.frontend { background: rgba(96,165,250,.1); border-color: rgba(96,165,250,.2); color: #93c5fd; }
 
 .project-header {
@@ -597,6 +601,9 @@ a  { text-decoration: none; color: inherit; }
   grid-column: span 2;
   background: rgba(13,13,28,.85);
   border-color: rgba(124,58,237,.22);
+}
+.project-card.featured .project-header {
+  padding-right: 120px;
 }
 
 .project-links { display: flex; gap: 8px; }
