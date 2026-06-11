@@ -599,12 +599,6 @@ a  { text-decoration: none; color: inherit; }
   border-color: rgba(124,58,237,.22);
 }
 
-/* StudyMind e E-commerce ficam juntos numa linha de 2 colunas cada */
-.projects-grid .project-card.featured:nth-of-type(2),
-.projects-grid .project-card.featured:last-of-type {
-  grid-column: span 2;
-}
-
 .project-links { display: flex; gap: 8px; }
 .project-link {
   width: 34px; height: 34px;
@@ -637,28 +631,6 @@ a  { text-decoration: none; color: inherit; }
   transition: color var(--t), gap var(--t); margin-top: auto;
 }
 .project-cta:hover { color: #fff; gap: 13px; }
-
-/* Tablet — 2 colunas */
-@media (max-width: 1024px) {
-  .projects-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-  .project-card.featured {
-    grid-column: span 2;
-  }
-}
-
-/* Mobile — 1 coluna */
-@media (max-width: 640px) {
-  .projects-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .project-card.featured {
-    grid-column: span 1;
-  }
-}
 
 /* ============================================================
    SKILLS
@@ -819,7 +791,7 @@ a  { text-decoration: none; color: inherit; }
   .about-card-side { max-width: 340px; margin: 0 auto; width: 100%; }
 
   .projects-grid { grid-template-columns: repeat(2,1fr); }
-  .project-card.featured { grid-column: span 1; }
+  .project-card.featured { grid-column: span 2; }
 
   .skills-grid { grid-template-columns: repeat(2,1fr); }
 
@@ -854,6 +826,7 @@ a  { text-decoration: none; color: inherit; }
 
   .about-highlights { grid-template-columns: 1fr; }
   .projects-grid    { grid-template-columns: 1fr; }
+  .project-card.featured { grid-column: span 1; }
   .skills-grid      { grid-template-columns: 1fr; }
 
   .footer-content { flex-direction: column; text-align: center; }
