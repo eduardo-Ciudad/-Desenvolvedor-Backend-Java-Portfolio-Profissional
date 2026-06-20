@@ -557,6 +557,8 @@ a  { text-decoration: none; color: inherit; }
   background: rgba(13,13,28,.85);
   border-color: rgba(124,58,237,.22);
 }
+.project-card.featured .project-header { padding-right: 120px; }
+.project-badge.freelance { background: rgba(245,158,11,.14); border-color: rgba(245,158,11,.22); color: #fcd34d; }
 .project-glow {
   position: absolute; top: -80px; right: -80px;
   width: 220px; height: 220px;
@@ -597,16 +599,12 @@ a  { text-decoration: none; color: inherit; }
   box-shadow: 0 0 20px rgba(124,58,237,.18);
 }
 
-.project-card.featured {
-  grid-column: span 2;
-  background: rgba(13,13,28,.85);
-  border-color: rgba(124,58,237,.22);
+.project-preview {
+  width: 100%; height: 150px; object-fit: cover; border-radius: 8px;
+  margin-bottom: 16px; border: 1px solid var(--border);
+  opacity: .82; transition: opacity var(--t);
 }
-.project-card.featured .project-header {
-  padding-right: 120px;
-}
-
-.project-links { display: flex; gap: 8px; }
+.project-card:hover .project-preview { opacity: 1; }
 .project-link {
   width: 34px; height: 34px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 8px;

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -89,7 +89,7 @@
 
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-number" data-count="5">5+</span>
+            <span class="stat-number" data-count="7">7+</span>
             <span class="stat-label">Projetos</span>
           </div>
           <div class="stat-divider"></div>
@@ -186,16 +186,16 @@
 
         <div class="about-content reveal">
           <p class="about-text">
-            Sou um desenvolvedor backend com foco em <strong>Java e Spring Boot</strong>, apaixonado por construir
-            sistemas robustos e APIs bem estruturadas que resolvem problemas reais.
+            Sou um desenvolvedor backend com foco em <strong>Java e Spring Boot</strong>, com experiência em APIs REST,
+            autenticação JWT, testes automatizados e containerização com Docker.
           </p>
           <p class="about-text">
-            Tenho experiência com projetos fullstack com <strong>deploy real</strong>, banco de dados relacional, testes
-            automatizados e containerização com Docker.
+            Já entreguei meu <strong>primeiro projeto freelance em produção</strong> — um sistema de controle financeiro
+            com autenticação JWT, rate limiting, relatórios e deploy no Vercel.
           </p>
           <p class="about-text">
-            Atualmente busco <strong>oportunidades freelance</strong> e minha primeira <strong>vaga junior</strong>,
-            onde possa contribuir, aprender e crescer em equipe.
+            Busco minha <strong>primeira vaga junior</strong> como desenvolvedor backend Java, onde possa contribuir,
+            evoluir e trabalhar em equipe.
           </p>
 
           <div class="about-highlights">
@@ -205,7 +205,7 @@
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <span>Projetos com deploy em produção</span>
+              <span>Projeto freelance entregue em produção</span>
             </div>
             <div class="highlight-item">
               <div class="highlight-icon">
@@ -252,21 +252,21 @@
 
       <div class="projects-grid">
 
-        <!-- Projeto 1 — Featured -->
-        <div class="project-card reveal" data-tilt>
-          <div class="project-badge">Fullstack</div>
+        <!-- Projeto 1 - Controle Financeiro (Featured) -->
+        <div class="project-card featured reveal" data-tilt>
+          <div class="project-badge freelance">Freelance</div>
           <div class="project-glow"></div>
           <div class="project-header">
             <div class="project-icon">
               <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                <line x1="12" y1="1" x2="12" y2="23" />
+                <path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
               </svg>
             </div>
           </div>
           <div class="project-links">
-            <a href="https://eduardo-ciudad.github.io/frontend-biblioteca-api/login.html" target="_blank"
-              rel="noopener" class="project-link" aria-label="Ver projeto">
+            <a href="https://cadin-financeiro.vercel.app" target="_blank" rel="noopener" class="project-link"
+              aria-label="Ver projeto">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
                 <polyline points="15 3 21 3 21 9" />
@@ -274,20 +274,23 @@
               </svg>
             </a>
           </div>
-          <h3 class="project-title">Sistema de Biblioteca</h3>
+          <img class="project-preview" src="img/financialcontrol-preview.png" alt="Preview Controle Financeiro"
+            loading="lazy">
+          <h3 class="project-title">Controle Financeiro</h3>
           <p class="project-description">
-            Sistema fullstack completo para gerenciamento de biblioteca — autenticação JWT, CRUD de livros, usuários e
-            empréstimos. Deploy real em produção.
+            Sistema de controle financeiro pessoal com autentica&ccedil;&atilde;o JWT, rate limiting com Bucket4j, relat&oacute;rios por
+            per&iacute;odo e deploy em produ&ccedil;&atilde;o. Primeiro projeto freelance entregue.
           </p>
           <div class="project-tech">
             <span class="tech-tag">Java</span>
             <span class="tech-tag">Spring Boot</span>
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Bucket4j</span>
             <span class="tech-tag">Docker</span>
+            <span class="tech-tag">HTML/CSS/JS</span>
           </div>
-          <a href="https://eduardo-ciudad.github.io/frontend-biblioteca-api/login.html" target="_blank" rel="noopener"
-            class="project-cta">
+          <a href="https://cadin-financeiro.vercel.app" target="_blank" rel="noopener" class="project-cta">
             Ver Projeto
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
               <line x1="5" y1="12" x2="19" y2="12" />
@@ -296,7 +299,7 @@
           </a>
         </div>
 
-        <!-- Projeto 2 -->
+        <!-- Projeto 2 - StudyMind (Featured) -->
         <div class="project-card featured reveal" data-tilt>
           <div class="project-badge in-dev">Fullstack</div>
           <div class="project-glow"></div>
@@ -318,10 +321,11 @@
               </svg>
             </a>
           </div>
+          <img class="project-preview" src="img/studymind-preview.png" alt="Preview StudyMind" loading="lazy">
           <h3 class="project-title">StudyMind</h3>
           <p class="project-description">
-            Plataforma de estudos inteligente com organização de matérias, cronogramas e acompanhamento de progresso.
-            Backend em desenvolvimento ativo.
+            Plataforma de estudos com IA integrada, cronogramas autom&aacute;ticos e acompanhamento de progresso. Fullstack
+            com frontend em HTML/CSS/JS e backend Java com Anthropic API.
           </p>
           <div class="project-tech">
             <span class="tech-tag">Java</span>
@@ -341,7 +345,84 @@
           </a>
         </div>
 
-        <!-- Projeto 3 -->
+        <!-- Projeto 3 - MiniModa -->
+        <div class="project-card reveal" data-tilt>
+          <div class="project-badge">Backend</div>
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                <line x1="3" y1="6" x2="21" y2="6" />
+                <path d="M16 10a4 4 0 0 1-8 0" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-links"></div>
+          <img class="project-preview" src="img/minimoda-preview.png" alt="Preview MiniModa" loading="lazy">
+          <h3 class="project-title">MiniModa &mdash; E-commerce Backend</h3>
+          <p class="project-description">
+            Backend completo de e-commerce para loja de roupas infantis &mdash; autentica&ccedil;&atilde;o JWT, carrinho persistente,
+            painel administrativo e fluxo completo de pedidos.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Flyway</span>
+            <span class="tech-tag">Swagger</span>
+            <span class="tech-tag">Docker Compose</span>
+          </div>
+        </div>
+
+        <!-- Projeto 4 - Sistema de Biblioteca -->
+        <div class="project-card reveal" data-tilt>
+          <div class="project-badge">Fullstack</div>
+          <div class="project-glow"></div>
+          <div class="project-header">
+            <div class="project-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+              </svg>
+            </div>
+          </div>
+          <div class="project-links">
+            <a href="https://eduardo-ciudad.github.io/frontend-biblioteca-api/login.html" target="_blank"
+              rel="noopener" class="project-link" aria-label="Ver projeto">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
+          </div>
+          <img class="project-preview" src="img/biblioteca-preview.png" alt="Preview Sistema de Biblioteca"
+            loading="lazy">
+          <h3 class="project-title">Sistema de Biblioteca</h3>
+          <p class="project-description">
+            Sistema fullstack completo para gerenciamento de biblioteca &mdash; autentica&ccedil;&atilde;o JWT, CRUD de livros,
+            usu&aacute;rios e empr&eacute;stimos. Deploy real em produ&ccedil;&atilde;o.
+          </p>
+          <div class="project-tech">
+            <span class="tech-tag">Java</span>
+            <span class="tech-tag">Spring Boot</span>
+            <span class="tech-tag">PostgreSQL</span>
+            <span class="tech-tag">JWT</span>
+            <span class="tech-tag">Docker</span>
+          </div>
+          <a href="https://eduardo-ciudad.github.io/frontend-biblioteca-api/login.html" target="_blank" rel="noopener"
+            class="project-cta">
+            Ver Projeto
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+        </div>
+
+        <!-- Projeto 5 - Landing Page Cantora -->
         <div class="project-card reveal" data-tilt>
           <div class="project-badge frontend">Frontend</div>
           <div class="project-glow"></div>
@@ -355,7 +436,7 @@
             </div>
           </div>
           <div class="project-links">
-            <a href="https://eduardo-cidade.github.io/leticia-souza-cantora/" target="_blank" rel="noopener"
+            <a href="https://eduardo-ciudad.github.io/leticia-souza-cantora/" target="_blank" rel="noopener"
               class="project-link" aria-label="Ver projeto">
               <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                 <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
@@ -366,7 +447,7 @@
           </div>
           <h3 class="project-title">Landing Page Cantora</h3>
           <p class="project-description">
-            Landing page profissional para cantora com design elegante, galeria de fotos e seção de shows.
+            Landing page profissional para cantora com design elegante, galeria de fotos e se&ccedil;&atilde;o de shows.
           </p>
           <div class="project-tech">
             <span class="tech-tag">HTML</span>
@@ -383,49 +464,7 @@
           </a>
         </div>
 
-        <!-- Projeto 4 -->
-        <div class="project-card reveal" data-tilt>
-          <div class="project-badge frontend">Frontend</div>
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <div class="project-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                <polyline points="9 22 9 12 15 12 15 22" />
-              </svg>
-            </div>
-          </div>
-          <div class="project-links">
-            <a href="https://eduardo-ciudad.github.io/sabor-naturaly/" target="_blank" rel="noopener"
-              class="project-link" aria-label="Ver projeto">
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
-                <polyline points="15 3 21 3 21 9" />
-                <line x1="10" y1="14" x2="21" y2="3" />
-              </svg>
-            </a>
-          </div>
-          <h3 class="project-title">Sabor Natural</h3>
-          <p class="project-description">
-            Landing page para loja de produtos naturais com catálogo visual, seção de benefícios e call-to-action para
-            vendas.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">HTML</span>
-            <span class="tech-tag">CSS</span>
-            <span class="tech-tag">JavaScript</span>
-          </div>
-          <a href="https://eduardo-ciudad.github.io/sabor-naturaly/" target="_blank" rel="noopener" class="project-cta">
-            Ver Projeto
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-              <line x1="5" y1="12" x2="19" y2="12" />
-              <polyline points="12 5 19 12 12 19" />
-            </svg>
-          </a>
-        </div>
-
-        <!-- Projeto 5 -->
-        <!-- Projeto 5 -->
+        <!-- Projeto 6 - Landing Page Ueitila Mendes -->
         <div class="project-card reveal" data-tilt>
           <div class="project-badge frontend">Frontend</div>
           <div class="project-glow"></div>
@@ -450,7 +489,7 @@
           </div>
           <h3 class="project-title">Landing Page Ueitila Mendes</h3>
           <p class="project-description">
-            Landing page profissional para cantora com design elegante, galeria de fotos e seção de shows.
+            Landing page profissional para cantora com design elegante, galeria de fotos e se&ccedil;&atilde;o de shows.
           </p>
           <div class="project-tech">
             <span class="tech-tag">HTML</span>
@@ -467,33 +506,7 @@
           </a>
         </div>
 
-        <!-- Projeto 6 -->
-        <div class="project-card featured reveal" data-tilt>
-          <div class="project-badge in-dev">Em desenvolvimento</div>
-          <div class="project-glow"></div>
-          <div class="project-header">
-            <div class="project-icon">
-              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
-                <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
-                <line x1="3" y1="6" x2="21" y2="6" />
-                <path d="M16 10a4 4 0 0 1-8 0" />
-              </svg>
-            </div>
-          </div>
-          <div class="project-links"></div>
-          <h3 class="project-title">E-commerce Infantil</h3>
-          <p class="project-description">
-            Plataforma de e-commerce fullstack para loja de roupas infantis — autenticação JWT, carrinho persistente,
-            painel administrativo e fluxo completo de pedidos.
-          </p>
-          <div class="project-tech">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Spring Boot</span>
-            <span class="tech-tag">React</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">JWT</span>
-          </div>
-        </div>
+      </div>
 
       </div>
     </div>
@@ -540,9 +553,9 @@
             </div>
             <div class="skill-item">
               <div class="skill-info"><span class="skill-name">Spring Security</span><span
-                  class="skill-level">Básico+</span></div>
+                  class="skill-level">Intermedi&#xE1;rio</span></div>
               <div class="skill-bar">
-                <div class="skill-fill" data-width="65"></div>
+                <div class="skill-fill" data-width="75"></div>
               </div>
             </div>
             <div class="skill-item">
@@ -582,10 +595,10 @@
               </div>
             </div>
             <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Flyway</span><span class="skill-level">Básico+</span>
+              <div class="skill-info"><span class="skill-name">Flyway</span><span class="skill-level">Intermedi&#xE1;rio</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-fill" data-width="60"></div>
+                <div class="skill-fill" data-width="75"></div>
               </div>
             </div>
           </div>
@@ -637,17 +650,17 @@
               </div>
             </div>
             <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Docker</span><span class="skill-level">Básico+</span>
+              <div class="skill-info"><span class="skill-name">Docker</span><span class="skill-level">Intermedi&#xE1;rio</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-fill" data-width="65"></div>
+                <div class="skill-fill" data-width="75"></div>
               </div>
             </div>
             <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Render</span><span class="skill-level">Básico+</span>
+              <div class="skill-info"><span class="skill-name">Render</span><span class="skill-level">Intermedi&#xE1;rio</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-fill" data-width="60"></div>
+                <div class="skill-fill" data-width="70"></div>
               </div>
             </div>
           </div>
@@ -698,6 +711,9 @@
         <span class="badge-pill">REST API</span>
         <span class="badge-pill">JWT</span>
         <span class="badge-pill">Render</span>
+        <span class="badge-pill">Swagger</span>
+        <span class="badge-pill">Docker Compose</span>
+        <span class="badge-pill">Bucket4j</span>
       </div>
     </div>
   </section>
@@ -815,7 +831,7 @@
           <span class="logo-bracket">&lt;</span>Eduardo<span class="logo-slash">/</span><span
             class="logo-bracket">&gt;</span>
         </a>
-        <p class="footer-text">Desenvolvido com dedicação por Eduardo Ciudad &copy; 2025</p>
+        <p class="footer-text">Desenvolvido com dedicação por Eduardo Ciudad &copy; 2026</p>
         <div class="footer-links">
           <a href="https://github.com/eduardo-Ciudad" target="_blank" rel="noopener" class="footer-link">GitHub</a>
           <a href="https://www.linkedin.com/in/eduardociudadf/" target="_blank" rel="noopener"

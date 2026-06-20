@@ -166,6 +166,7 @@ const phrases  = [
   'Spring Boot Enthusiast',
   'Construindo APIs Escaláveis',
   'Disponível para Freelance',
+  'Primeiro freelance entregue ✓',
 ];
 
 let pIdx   = 0;
