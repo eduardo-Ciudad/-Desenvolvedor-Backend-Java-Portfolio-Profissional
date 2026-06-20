@@ -552,12 +552,7 @@ a  { text-decoration: none; color: inherit; }
   border-color: rgba(124,58,237,.32);
   box-shadow: 0 22px 60px rgba(0,0,0,.5), 0 0 40px rgba(124,58,237,.1);
 }
-.project-card.featured {
-  grid-column: span 2;
-  background: rgba(13,13,28,.85);
-  border-color: rgba(124,58,237,.22);
-}
-.project-card.featured .project-header { padding-right: 120px; }
+.project-card.featured { grid-column: span 1; }
 .project-badge.freelance { background: rgba(245,158,11,.12); border: 1px solid rgba(245,158,11,.25); color: #fbbf24; }
 .project-glow {
   position: absolute; top: -80px; right: -80px;
@@ -614,17 +609,6 @@ a  { text-decoration: none; color: inherit; }
   opacity: .8; transition: opacity var(--t) var(--ease), transform .5s var(--ease);
 }
 .project-card:hover .project-preview { opacity: 1; transform: scale(1.03); }
-.project-card:not(.featured) { display: flex; flex-direction: column; }
-.project-card:not(.featured) .project-description { flex: 1; }
-.project-card.featured .project-card-body {
-  display: grid; grid-template-columns: 1.2fr 1fr; gap: 28px; align-items: center;
-}
-.project-card.featured .project-preview-wrapper { aspect-ratio: 16 / 10; margin-bottom: 0; }
-.project-card.featured .project-card-text {
-  display: flex; flex-direction: column; gap: 12px;
-}
-.project-card.featured .project-card-text .project-description { margin-bottom: 0; flex: none; }
-.project-card.featured .project-card-text .project-tech { margin-bottom: 0; }
 .project-link {
   width: 34px; height: 34px;
   background: var(--surface); border: 1px solid var(--border); border-radius: 8px;
@@ -816,7 +800,6 @@ a  { text-decoration: none; color: inherit; }
   .about-card-side { max-width: 340px; margin: 0 auto; width: 100%; }
 
   .projects-grid { grid-template-columns: repeat(2,1fr); }
-  .project-card.featured { grid-column: span 2; }
 
   .skills-grid { grid-template-columns: repeat(2,1fr); }
 
@@ -851,9 +834,6 @@ a  { text-decoration: none; color: inherit; }
 
   .about-highlights { grid-template-columns: 1fr; }
   .projects-grid    { grid-template-columns: 1fr; }
-  .project-card.featured { grid-column: span 1; }
-  .project-card.featured .project-card-body { grid-template-columns: 1fr; gap: 16px; }
-  .project-card.featured .project-preview-wrapper { aspect-ratio: 16 / 9; margin-bottom: 16px; }
   .skills-grid      { grid-template-columns: 1fr; }
 
   .footer-content { flex-direction: column; text-align: center; }
