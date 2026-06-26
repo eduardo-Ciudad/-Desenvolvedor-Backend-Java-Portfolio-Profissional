@@ -238,6 +238,7 @@ document.querySelectorAll('.skill-category').forEach(c => skillObserver.observe(
 ============================================================ */
 document.querySelectorAll('[data-tilt]').forEach(card => {
   card.addEventListener('mousemove', e => {
+    if (card.classList.contains('expanded')) return;
     const rect = card.getBoundingClientRect();
     const rx   = ((e.clientY - rect.top)  / rect.height - 0.5) * -8;
     const ry   = ((e.clientX - rect.left) / rect.width  - 0.5) *  8;
@@ -245,6 +246,7 @@ document.querySelectorAll('[data-tilt]').forEach(card => {
     card.style.transform  = `translateY(-6px) perspective(900px) rotateX(${rx}deg) rotateY(${ry}deg)`;
   });
   card.addEventListener('mouseleave', () => {
+    if (card.classList.contains('expanded')) return;
     card.style.transition = 'transform .55s ease';
     card.style.transform  = 'translateY(0) perspective(900px) rotateX(0) rotateY(0)';
   });
@@ -276,15 +278,87 @@ const statsObserver = new IntersectionObserver(entries => {
 document.querySelectorAll('.stat').forEach(s => statsObserver.observe(s));
 
 /* ============================================================
-   PROJECT MODAL
+   PROJECT ZOOM OVERLAY
 ============================================================ */
-document.querySelectorAll('.project-card').forEach(function(card) {
-  card.addEventListener('click', function(e) {
-    if (e.target.closest('a')) return;
-    if (card.classList.contains('expanded') && e.target.closest('.card-expanded')) return;
-    card.classList.toggle('expanded');
+(function() {
+  const backdrop = document.createElement('div');
+  backdrop.className = 'card-backdrop';
+  document.body.appendChild(backdrop);
+
+  let activeCard = null;
+  let savedScroll = 0;
+
+  function openCard(card) {
+    if (activeCard) closeCard(activeCard, true);
+
+    savedScroll = window.scrollY;
+
+    /* FLIP step 1: record natural viewport position */
+    const rect = card.getBoundingClientRect();
+
+    /* FLIP step 2: pin card to that same spot in fixed coords, no transition */
+    card.style.cssText =
+      'position:fixed!important;' +
+      'top:' + rect.top + 'px!important;' +
+      'left:' + rect.left + 'px!important;' +
+      'width:' + rect.width + 'px!important;' +
+      'transform:none!important;' +
+      'transition:none!important;' +
+      'z-index:1000;margin:0;';
+
+    /* Force paint so browser commits the starting frame */
+    card.getBoundingClientRect();
+
+    /* FLIP step 3: clear inline overrides → class rules drive animation to center */
+    requestAnimationFrame(function() {
+      card.style.cssText = '';
+      card.classList.add('expanded');
+      backdrop.classList.add('active');
+      document.body.style.overflow = 'hidden';
+      activeCard = card;
+    });
+  }
+
+  function closeCard(card, instant) {
+    card.classList.remove('expanded');
+    backdrop.classList.remove('active');
+    document.body.style.overflow = '';
+    activeCard = null;
+  }
+
+
+
+  /* Add close button to every card */
+  document.querySelectorAll('.project-card').forEach(function(card) {
+    const btn = document.createElement('button');
+    btn.className = 'card-exp-close';
+    btn.setAttribute('aria-label', 'Fechar');
+    btn.innerHTML = '<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>';
+    card.appendChild(btn);
+
+    btn.addEventListener('click', function(e) {
+      e.stopPropagation();
+      closeCard(card);
+    });
+
+    card.addEventListener('click', function(e) {
+      if (e.target.closest('a')) return;
+      if (e.target.closest('.card-exp-close')) return;
+      if (card.classList.contains('expanded')) return;
+      openCard(card);
+    });
   });
-});
+
+  /* Close on backdrop click */
+  backdrop.addEventListener('click', function() {
+    if (activeCard) closeCard(activeCard);
+  });
+
+  /* Close on ESC */
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape' && activeCard) closeCard(activeCard);
+  });
+})();
 
 /* ============================================================
    CODE CARD — line-by-line reveal

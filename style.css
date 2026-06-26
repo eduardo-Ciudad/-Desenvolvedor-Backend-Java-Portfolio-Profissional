@@ -648,17 +648,82 @@ a  { text-decoration: none; color: inherit; }
 }
 
 /* ============================================================
-   CARD INLINE EXPAND
+   CARD ZOOM OVERLAY
 ============================================================ */
-.card-expanded {
-  display: grid;
-  grid-template-rows: 0fr;
-  transition: grid-template-rows 350ms ease-out;
+
+/* Backdrop */
+.card-backdrop {
+  position: fixed;
+  inset: 0;
+  z-index: 900;
+  background: rgba(5,5,8,0.82);
+  backdrop-filter: blur(6px);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 350ms var(--ease);
 }
+.card-backdrop.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+/* Hide detail content by default */
+.card-expanded { display: none; }
+
+/* Card in expanded/overlay state */
+.project-card.expanded {
+  position: fixed !important;
+  z-index: 1000;
+  top: 50% !important;
+  left: 50% !important;
+  transform: translate(-50%, -50%) !important;
+  width: min(700px, 95vw) !important;
+  max-height: 90vh;
+  overflow-y: auto;
+  overflow-x: hidden;
+  cursor: default !important;
+  /* reset tilt so it doesn't fight the centering */
+  transition:
+    top 380ms var(--ease),
+    left 380ms var(--ease),
+    width 380ms var(--ease),
+    height 380ms var(--ease),
+    transform 380ms var(--ease),
+    box-shadow 380ms var(--ease);
+  box-shadow: 0 32px 80px rgba(0,0,0,0.65), 0 0 0 1px rgba(124,58,237,0.35);
+}
+
+/* Show detail content only when expanded */
 .project-card.expanded .card-expanded {
-  grid-template-rows: 1fr;
+  display: block;
+  animation: fadeSlideIn 280ms var(--ease) both;
+  animation-delay: 180ms;
 }
-.card-expanded-inner { overflow: hidden; }
+
+@keyframes fadeSlideIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* Close button */
+.card-exp-close {
+  position: absolute;
+  top: 14px; right: 14px;
+  width: 32px; height: 32px;
+  display: none;
+  align-items: center; justify-content: center;
+  background: rgba(255,255,255,0.07);
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  color: var(--text-muted);
+  cursor: pointer;
+  z-index: 10;
+  transition: background 180ms, color 180ms;
+}
+.card-exp-close:hover { background: rgba(124,58,237,0.22); color: var(--text); }
+.project-card.expanded .card-exp-close { display: flex; }
+
+/* Detail sections */
 .card-exp-divider {
   height: 1px;
   background: var(--border);
@@ -679,16 +744,9 @@ a  { text-decoration: none; color: inherit; }
   padding-bottom: 4px;
 }
 .card-exp-links .btn { font-size: .82rem; padding: 9px 18px; }
-.card-expand-indicator {
-  display: flex; justify-content: center;
-  margin-top: 16px;
-  color: var(--text-dim);
-  transition: transform 350ms ease-out, color 200ms;
-}
-.project-card.expanded .card-expand-indicator {
-  transform: rotate(180deg);
-  color: var(--purple-light);
-}
+
+/* Hide chevron indicator (no longer needed) */
+.card-expand-indicator { display: none; }
 
 /* ============================================================
    SKILLS
