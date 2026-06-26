@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="pt-BR">
 
 <head>
@@ -298,6 +298,36 @@
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
+          <div class="card-expanded">
+            <div class="card-expanded-inner">
+              <div class="card-exp-divider"></div>
+              <div class="card-exp-section">
+                <h4>Sobre o projeto</h4>
+                <p>Sistema de gest&atilde;o financeira desenvolvido sob demanda para uma fornecedora de tecidos real. Controla contas a receber/pagar de clientes e fornecedores, estoque de produtos e dashboard financeiro do neg&oacute;cio.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como funciona</h4>
+                <p>Modelo de conta-corrente &mdash; cada venda ou pagamento gera um lan&ccedil;amento. O saldo &eacute; calculado em tempo real via SUM, nunca armazenado diretamente. Dashboard com resumo di&aacute;rio, gr&aacute;fico mensal e listagem de clientes devedores.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Decis&otilde;es t&eacute;cnicas</h4>
+                <p>Arquitetura append-only: lan&ccedil;amentos nunca s&atilde;o deletados, apenas estornados (novo lan&ccedil;amento inverso), garantindo rastreabilidade completa. Package-by-feature, JWT, Bucket4j e Docker multi-stage build.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como foi desenvolver</h4>
+                <p>Primeiro projeto freelance &mdash; do levantamento de requisitos com o cliente at&eacute; o deploy em produ&ccedil;&atilde;o. Aprendi a traduzir necessidades reais do neg&oacute;cio em decis&otilde;es t&eacute;cnicas concretas.</p>
+              </div>
+              <div class="card-exp-links">
+                <a href="https://cadin-financeiro.vercel.app" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+                <a href="https://github.com/eduardo-Ciudad/cadin-finaceiro-" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-expand-indicator" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
         </div>
 
         <!-- Projeto 2 - StudyMind (Featured) -->
@@ -346,6 +376,36 @@
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
+          <div class="card-expanded">
+            <div class="card-expanded-inner">
+              <div class="card-exp-divider"></div>
+              <div class="card-exp-section">
+                <h4>Sobre o projeto</h4>
+                <p>Plataforma de estudos inteligente que usa IA para gerar planos de estudo personalizados. O sistema conduz um onboarding conversacional, entende mat&eacute;rias e objetivos do aluno, e gera automaticamente um cronograma completo.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como funciona</h4>
+                <p>Onboarding por chat: a IA faz perguntas e gera um plano em JSON, parseado automaticamente em mat&eacute;rias, t&oacute;picos e tarefas no banco. O aluno registra sess&otilde;es de estudo e recebe recomenda&ccedil;&otilde;es adaptativas e gera&ccedil;&atilde;o de aulas via IA.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Decis&otilde;es t&eacute;cnicas</h4>
+                <p>Claude Haiku via API da Anthropic. PlanoEstudoParser converte JSON da IA em entidades do banco. Refresh token JWT de 7 dias, email ass&iacute;ncrono via @Async, rate limiting diferenciado por endpoint. 58 testes automatizados.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como foi desenvolver</h4>
+                <p>Projeto mais complexo tecnicamente. Aprendi a integrar APIs externas e transformar texto livre da IA em dados estruturados no banco de forma confi&aacute;vel e consistente.</p>
+              </div>
+              <div class="card-exp-links">
+                <a href="https://studymind-mu.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Ver Frontend</a>
+                <a href="https://github.com/eduardo-Ciudad/StudyMind" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-expand-indicator" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
         </div>
 
         <!-- Projeto 3 - MiniModa -->
@@ -378,6 +438,35 @@
             <span class="tech-tag">Flyway</span>
             <span class="tech-tag">Swagger</span>
             <span class="tech-tag">Docker Compose</span>
+          </div>
+          <div class="card-expanded">
+            <div class="card-expanded-inner">
+              <div class="card-exp-divider"></div>
+              <div class="card-exp-section">
+                <h4>Sobre o projeto</h4>
+                <p>Backend completo de e-commerce para loja de roupas infantis. Cat&aacute;logo de produtos, carrinho persistente, dois n&iacute;veis de acesso (ADMIN e CLIENT) e fluxo completo de pedidos com controle de estados.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como funciona</h4>
+                <p>Pedidos seguem uma m&aacute;quina de estados (PENDING &rarr; CONFIRMED &rarr; SHIPPED &rarr; DELIVERED) via enum com transi&ccedil;&otilde;es permitidas embutidas. O admin gerencia produtos e categorias; o carrinho persiste entre sess&otilde;es.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Decis&otilde;es t&eacute;cnicas</h4>
+                <p>Corre&ccedil;&atilde;o de IDOR com valida&ccedil;&atilde;o de ownership (padr&atilde;o 404-over-403). JWT refresh com claim de tipo para impedir uso indevido. Rate limiting com cache Caffeine. Ports &amp; Adapters para pagamento.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como foi desenvolver</h4>
+                <p>Projeto onde mais aprendi sobre seguran&ccedil;a. Entender IDOR, 404-over-403 e refresh token correto mudou como penso em autentica&ccedil;&atilde;o e autoriza&ccedil;&atilde;o em qualquer sistema.</p>
+              </div>
+              <div class="card-exp-links">
+                <a href="https://github.com/eduardo-Ciudad/MiniModa" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-expand-indicator" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
           </div>
         </div>
 
@@ -426,6 +515,36 @@
               <polyline points="12 5 19 12 12 19" />
             </svg>
           </a>
+          <div class="card-expanded">
+            <div class="card-expanded-inner">
+              <div class="card-exp-divider"></div>
+              <div class="card-exp-section">
+                <h4>Sobre o projeto</h4>
+                <p>API REST completa para gerenciamento de biblioteca &mdash; meu primeiro projeto fullstack com deploy real. Gerencia livros, usu&aacute;rios e empr&eacute;stimos com controle de acesso por role (ADMIN e USER).</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como funciona</h4>
+                <p>ADMIN cadastra livros e gerencia usu&aacute;rios. Users consultam o cat&aacute;logo e solicitam empr&eacute;stimos com controle de devolu&ccedil;&atilde;o. Frontend responsivo com est&eacute;tica de biblioteca, UI adaptada por role do usu&aacute;rio logado.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Decis&otilde;es t&eacute;cnicas</h4>
+                <p>Iniciou com JDBC manual e DAO pattern, depois migrado para Spring Data JPA. Spring Security com role-based access, Bean Validation, Swagger/OpenAPI. Migra&ccedil;&atilde;o de MySQL para PostgreSQL. Deploy no Render.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como foi desenvolver</h4>
+                <p>O projeto que me ensinou os fundamentos. JDBC vs JPA na pr&aacute;tica, por que usar DTOs, ciclo de vida de uma requisi&ccedil;&atilde;o no Spring. Cada erro aqui me preparou para os projetos seguintes.</p>
+              </div>
+              <div class="card-exp-links">
+                <a href="https://eduardo-ciudad.github.io/frontend-biblioteca-api/login.html" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+                <a href="https://github.com/eduardo-Ciudad/biblioteca-api" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
+              </div>
+            </div>
+          </div>
+          <div class="card-expand-indicator" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polyline points="6 9 12 15 18 9"/>
+            </svg>
+          </div>
         </div>
 
       </div>
@@ -769,53 +888,6 @@
       </div>
     </div>
   </footer>
-
-  <!-- Project Modal -->
-  <div class="project-modal-overlay" id="projectModal">
-    <div class="project-modal">
-      <button class="modal-close" id="modalClose" aria-label="Fechar">
-        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-          <line x1="18" y1="6" x2="6" y2="18" />
-          <line x1="6" y1="6" x2="18" y2="18" />
-        </svg>
-      </button>
-
-      <div class="modal-header">
-        <span class="modal-badge" id="modalBadge"></span>
-        <h2 class="modal-title" id="modalTitle"></h2>
-      </div>
-
-      <div class="modal-image-wrapper">
-        <img id="modalImage" src="" alt="" class="modal-image" />
-      </div>
-
-      <div class="modal-body">
-        <div class="modal-section">
-          <h3>Sobre o projeto</h3>
-          <p id="modalAbout"></p>
-        </div>
-
-        <div class="modal-section">
-          <h3>Como funciona</h3>
-          <p id="modalHow"></p>
-        </div>
-
-        <div class="modal-section">
-          <h3>Decis&otilde;es t&eacute;cnicas</h3>
-          <p id="modalTech"></p>
-        </div>
-
-        <div class="modal-section">
-          <h3>Como foi desenvolver</h3>
-          <p id="modalExperience"></p>
-        </div>
-
-        <div class="modal-tags" id="modalTags"></div>
-
-        <div class="modal-actions" id="modalActions"></div>
-      </div>
-    </div>
-  </div>
 
   <!-- Custom Cursor -->
   <div class="cursor" id="cursor"></div>
