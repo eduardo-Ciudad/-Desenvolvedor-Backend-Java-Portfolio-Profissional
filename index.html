@@ -381,19 +381,16 @@
               <div class="card-exp-divider"></div>
               <div class="card-exp-section">
                 <h4>Sobre o projeto</h4>
-                <p>Plataforma de estudos inteligente que usa IA para gerar planos de estudo personalizados. O sistema conduz um onboarding conversacional, entende mat&eacute;rias e objetivos do aluno, e gera automaticamente um cronograma completo.</p>
-              </div>
-              <div class="card-exp-section">
-                <h4>Como funciona</h4>
-                <p>Onboarding por chat: a IA faz perguntas e gera um plano em JSON, parseado automaticamente em mat&eacute;rias, t&oacute;picos e tarefas no banco. O aluno registra sess&otilde;es de estudo e recebe recomenda&ccedil;&otilde;es adaptativas e gera&ccedil;&atilde;o de aulas via IA.</p>
-              </div>
-              <div class="card-exp-section">
-                <h4>Decis&otilde;es t&eacute;cnicas</h4>
-                <p>Claude Haiku via API da Anthropic. PlanoEstudoParser converte JSON da IA em entidades do banco. Refresh token JWT de 7 dias, email ass&iacute;ncrono via @Async, rate limiting diferenciado por endpoint. 58 testes automatizados.</p>
-              </div>
-              <div class="card-exp-section">
-                <h4>Como foi desenvolver</h4>
-                <p>Projeto mais complexo tecnicamente. Aprendi a integrar APIs externas e transformar texto livre da IA em dados estruturados no banco de forma confi&aacute;vel e consistente.</p>
+<p>Sistema de gest&atilde;o financeira multi-tenant desenvolvido para pequenos neg&oacute;cios. Evolu&ccedil;&atilde;o do primeiro projeto freelance, agora com suporte a m&uacute;ltiplos usu&aacute;rios, cada um com seus dados completamente isolados.</p>
+
+<h4>Como funciona</h4>
+<p>Cada usu&aacute;rio se cadastra e gerencia seus pr&oacute;prios clientes, fornecedores, estoque e vendas. Modelo de conta-corrente com saldo calculado em tempo real via SUM. Dashboard com resumo di&aacute;rio, navega&ccedil;&atilde;o mensal e extrato por cliente.</p>
+
+<h4>Decis&otilde;es t&eacute;cnicas</h4>
+<p>Arquitetura append-only: lan&ccedil;amentos nunca s&atilde;o deletados, apenas estornados. Isolamento multi-tenant via usuario_id em todas as queries. Deploy em VPS pr&oacute;pria com Docker, Nginx como reverse proxy e SSL via Let's Encrypt. Rate limiting com Bucket4j e Caffeine.</p>
+
+<h4>Como foi desenvolver</h4>
+<p>Primeiro deploy em infraestrutura pr&oacute;pria. Configurei o servidor do zero: SSH, Docker Compose, Nginx, Certbot e dom&iacute;nio com DuckDNS. Aprendi que deploy n&atilde;o &eacute; m&aacute;gica, &eacute; uma sequ&ecirc;ncia de passos que qualquer dev consegue aprender.</p>
               </div>
               <div class="card-exp-links">
                 <a href="https://studymind-mu.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Ver Frontend</a>
@@ -431,13 +428,14 @@
             painel administrativo e fluxo completo de pedidos.
           </p>
           <div class="project-tech">
-            <span class="tech-tag">Java</span>
-            <span class="tech-tag">Spring Boot</span>
-            <span class="tech-tag">PostgreSQL</span>
-            <span class="tech-tag">JWT</span>
-            <span class="tech-tag">Flyway</span>
-            <span class="tech-tag">Swagger</span>
-            <span class="tech-tag">Docker Compose</span>
+            <span class="tech-tag">Java 17</span>
+<span class="tech-tag">Spring Boot 3</span>
+<span class="tech-tag">PostgreSQL</span>
+<span class="tech-tag">JWT</span>
+<span class="tech-tag">Docker</span>
+<span class="tech-tag">Nginx</span>
+<span class="tech-tag">SSL</span>
+<span class="tech-tag">Flyway</span>
           </div>
           <div class="card-expanded">
             <div class="card-expanded-inner">
