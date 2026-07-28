@@ -50,7 +50,11 @@ O design segue uma identidade visual **dark mode com tons roxos**, trazendo uma 
 
 * Docker
 * Flyway
+* Nginx
 * Git & GitHub
+* GitHub Actions
+* Cloudflare R2
+* Mercado Pago
 
 ---
 
@@ -80,6 +84,30 @@ O design segue uma identidade visual **dark mode com tons roxos**, trazendo uma 
 
 ## 💼 Projetos em destaque
 
+### 💰 Controle Financeiro
+
+Sistema multi-tenant de controle financeiro com JWT, rate limiting, verificação de email, LGPD compliance e deploy em VPS própria com Docker, Nginx e SSL.
+
+🔗 https://controle-financeiro-lab-frontend.vercel.app/
+
+---
+
+### 🧠 StudyMind
+
+Plataforma de estudos com IA integrada (Anthropic API) — onboarding conversacional gera plano de estudos personalizado, dashboard de desempenho e recomendações automáticas.
+
+🔗 https://eduardo-ciudad.github.io/frontend-study-mind/
+
+---
+
+### 🛍️ GabiKids — E-commerce Completo
+
+E-commerce fullstack de moda infantil com pagamento via Mercado Pago (cartão e Pix), imagens no Cloudflare R2 e deploy em VPS própria com Docker, Nginx e SSL.
+
+🔗 https://gabikids.duckdns.org:8081
+
+---
+
 ### 📚 Sistema de Biblioteca
 
 Sistema fullstack com CRUD completo e controle de empréstimos.
@@ -88,35 +116,7 @@ Sistema fullstack com CRUD completo e controle de empréstimos.
 
 ---
 
-### 🧠 StudyMind (Projeto principal)
-
-Plataforma de estudos com backend em desenvolvimento.
-
-🔗 https://eduardo-ciudad.github.io/frontend-study-mind/
-
----
-
-### 🎤 Landing Page Cantora
-
-Site profissional para presença digital de artista.
-
-🔗 https://eduardo-ciudad.github.io/leticia-souza-cantora/
-
----
-
-### 🛒 Produtos Naturais
-
-Landing page para negócio local com foco em conversão.
-
-🔗 https://eduardo-ciudad.github.io/sabor-naturaly/
-
----
-
-### 🏋️ Personal Trainer
-
-Página profissional para captação de clientes.
-
-🔗 https://eduardo-ciudad.github.io/personal-trainer-perfil/
+Outros projetos em desenvolvimento incluem **TrilhaX** e **ATSReady**, além de landing pages freelance para clientes reais.
 
 ---
 

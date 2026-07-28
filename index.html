@@ -89,7 +89,7 @@
 
         <div class="hero-stats">
           <div class="stat">
-            <span class="stat-number" data-count="7">7+</span>
+            <span class="stat-number" data-count="10">10+</span>
             <span class="stat-label">Projetos</span>
           </div>
           <div class="stat-divider"></div>
@@ -176,6 +176,8 @@
               <span class="tag">Spring Boot</span>
               <span class="tag">PostgreSQL</span>
               <span class="tag">Docker</span>
+              <span class="tag">Flyway</span>
+              <span class="tag">Nginx</span>
             </div>
             <div class="profile-status">
               <span class="status-dot"></span>
@@ -186,16 +188,13 @@
 
         <div class="about-content reveal">
           <p class="about-text">
-            Sou um desenvolvedor backend com foco em <strong>Java e Spring Boot</strong>, com experiência em APIs REST,
-            autenticação JWT, testes automatizados e containerização com Docker.
+            Sou um desenvolvedor backend autodidata de 17 anos com foco em <strong>Java 17 e Spring Boot 3</strong>. Construo APIs REST completas com autenticação JWT, Flyway, testes automatizados com JUnit/Mockito, e deploy com Docker em VPS própria.
           </p>
           <p class="about-text">
-            Já entreguei meu <strong>primeiro projeto freelance em produção</strong> — um sistema de controle financeiro
-            com autenticação JWT, rate limiting, relatórios e deploy no Vercel.
+            Já entreguei projetos reais em produção — incluindo um <strong>sistema financeiro freelance</strong> para um cliente real e um <strong>e-commerce completo</strong> (GabiKids) com pagamento via Mercado Pago, imagens no Cloudflare R2 e deploy em VPS Hostinger com Nginx e SSL.
           </p>
           <p class="about-text">
-            Busco minha <strong>primeira vaga junior</strong> como desenvolvedor backend Java, onde possa contribuir,
-            evoluir e trabalhar em equipe.
+            Busco minha <strong>primeira vaga junior</strong> como desenvolvedor backend Java. Também produzo conteúdo dev no Instagram <strong>@ciudad_dev</strong> e estou iniciando a graduação em Análise e Desenvolvimento de Sistemas.
           </p>
 
           <div class="about-highlights">
@@ -205,7 +204,7 @@
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <span>Projeto freelance entregue em produção</span>
+              <span>Projetos freelance entregues em produção</span>
             </div>
             <div class="highlight-item">
               <div class="highlight-icon">
@@ -213,7 +212,7 @@
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <span>APIs RESTful com Spring Boot &amp; JWT</span>
+              <span>Deploy em VPS própria (Docker + Nginx + SSL)</span>
             </div>
             <div class="highlight-item">
               <div class="highlight-icon">
@@ -221,7 +220,7 @@
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <span>Testes automatizados com JUnit e Mockito</span>
+              <span>Integração de pagamento com Mercado Pago</span>
             </div>
             <div class="highlight-item">
               <div class="highlight-icon">
@@ -229,7 +228,7 @@
                   <polyline points="20 6 9 17 4 12" />
                 </svg>
               </div>
-              <span>Containerização com Docker</span>
+              <span>Testes automatizados com JUnit 5 e Mockito</span>
             </div>
           </div>
 
@@ -279,16 +278,18 @@
           </div>
           <h3 class="project-title">Controle Financeiro</h3>
           <p class="project-description">
-            Sistema de controle financeiro pessoal com autentica&ccedil;&atilde;o JWT, rate limiting com Bucket4j, relat&oacute;rios por
-            per&iacute;odo e deploy em produ&ccedil;&atilde;o. Primeiro projeto freelance entregue.
+            Sistema multi-tenant de controle financeiro com autentica&ccedil;&atilde;o JWT, rate limiting, verifica&ccedil;&atilde;o de email,
+            LGPD compliance e deploy em VPS pr&oacute;pria com Docker, Nginx e SSL.
           </p>
           <div class="project-tech">
             <span class="tech-tag">Java</span>
             <span class="tech-tag">Spring Boot</span>
             <span class="tech-tag">PostgreSQL</span>
             <span class="tech-tag">JWT</span>
-            <span class="tech-tag">Bucket4j</span>
             <span class="tech-tag">Docker</span>
+            <span class="tech-tag">Nginx</span>
+            <span class="tech-tag">Flyway</span>
+            <span class="tech-tag">SSL</span>
             <span class="tech-tag">HTML/CSS/JS</span>
           </div>
           <a href="https://controle-financeiro-lab-frontend.vercel.app/" target="_blank" rel="noopener" class="project-cta">
@@ -311,11 +312,11 @@
               </div>
               <div class="card-exp-section">
                 <h4>Decis&otilde;es t&eacute;cnicas</h4>
-                <p>Arquitetura append-only: lan&ccedil;amentos nunca s&atilde;o deletados, apenas estornados (novo lan&ccedil;amento inverso), garantindo rastreabilidade completa. Package-by-feature, JWT, Bucket4j e Docker multi-stage build.</p>
+                <p>Arquitetura append-only com estornos. Isolamento multi-tenant via usuario_id. Deploy em VPS Hostinger com Docker, Nginx como reverse proxy e SSL via Let's Encrypt/DuckDNS. Rate limiting com Caffeine. Verifica&ccedil;&atilde;o de email ass&iacute;ncrona via Gmail SMTP. P&aacute;ginas legais LGPD-compliant com cookie consent banner. Flyway migrations (V1&ndash;V16). 15+ testes JUnit 5.</p>
               </div>
               <div class="card-exp-section">
                 <h4>Como foi desenvolver</h4>
-                <p>Primeiro projeto freelance &mdash; do levantamento de requisitos com o cliente at&eacute; o deploy em produ&ccedil;&atilde;o. Aprendi a traduzir necessidades reais do neg&oacute;cio em decis&otilde;es t&eacute;cnicas concretas.</p>
+                <p>Do primeiro projeto freelance ao primeiro deploy em infraestrutura pr&oacute;pria. Configurei o servidor do zero: SSH, Docker Compose, Nginx, Certbot e dom&iacute;nio com DuckDNS. Implementar LGPD, email verification e password reset flows me aproximou de como sistemas de produ&ccedil;&atilde;o reais funcionam.</p>
               </div>
               <div class="card-exp-links">
                 <a href="https://controle-financeiro-lab-frontend.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
@@ -381,16 +382,19 @@
               <div class="card-exp-divider"></div>
               <div class="card-exp-section">
                 <h4>Sobre o projeto</h4>
-<p>Sistema de gest&atilde;o financeira multi-tenant desenvolvido para pequenos neg&oacute;cios. Evolu&ccedil;&atilde;o do primeiro projeto freelance, agora com suporte a m&uacute;ltiplos usu&aacute;rios, cada um com seus dados completamente isolados.</p>
-
-<h4>Como funciona</h4>
-<p>Cada usu&aacute;rio se cadastra e gerencia seus pr&oacute;prios clientes, fornecedores, estoque e vendas. Modelo de conta-corrente com saldo calculado em tempo real via SUM. Dashboard com resumo di&aacute;rio, navega&ccedil;&atilde;o mensal e extrato por cliente.</p>
-
-<h4>Decis&otilde;es t&eacute;cnicas</h4>
-<p>Arquitetura append-only: lan&ccedil;amentos nunca s&atilde;o deletados, apenas estornados. Isolamento multi-tenant via usuario_id em todas as queries. Deploy em VPS pr&oacute;pria com Docker, Nginx como reverse proxy e SSL via Let's Encrypt. Rate limiting com Bucket4j e Caffeine.</p>
-
-<h4>Como foi desenvolver</h4>
-<p>Primeiro deploy em infraestrutura pr&oacute;pria. Configurei o servidor do zero: SSH, Docker Compose, Nginx, Certbot e dom&iacute;nio com DuckDNS. Aprendi que deploy n&atilde;o &eacute; m&aacute;gica, &eacute; uma sequ&ecirc;ncia de passos que qualquer dev consegue aprender.</p>
+                <p>Plataforma de estudos com IA integrada para vestibular. Onboarding conversacional gera um plano de estudos personalizado com mat&eacute;rias, t&oacute;picos e tarefas. Dashboard acompanha desempenho e recomenda&ccedil;&otilde;es autom&aacute;ticas.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como funciona</h4>
+                <p>Usu&aacute;rio faz cadastro, verifica email e passa por onboarding com IA (Claude Haiku via Anthropic API). A resposta JSON &eacute; parseada pelo PlanoEstudoParser que popula mat&eacute;rias, t&oacute;picos e tarefas. Dashboard exibe progresso, an&aacute;lise de desempenho e recomenda&ccedil;&otilde;es.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Decis&otilde;es t&eacute;cnicas</h4>
+                <p>JWT com refresh token, rate limiting com Bucket4j, email verification ass&iacute;ncrono via Gmail SMTP (@Async), cron jobs (@Scheduled), PerformanceAnalyzerService e RecommendationService. 58 testes passando. Docker + docker-compose. 16 Flyway migrations.</p>
+              </div>
+              <div class="card-exp-section">
+                <h4>Como foi desenvolver</h4>
+                <p>Projeto mais complexo em escopo. Integrar a Anthropic API e parsear JSON de IA para popular o banco foi um desafio real. Aprendi a lidar com respostas imprevis&iacute;veis de LLM e a construir servi&ccedil;os que dependem de APIs externas de forma resiliente.</p>
               </div>
               <div class="card-exp-links">
                 <a href="https://studymind-mu.vercel.app/" target="_blank" rel="noopener" class="btn btn-primary">Ver Frontend</a>
@@ -405,9 +409,9 @@
           </div>
         </div>
 
-        <!-- Projeto 3 - MiniModa -->
+        <!-- Projeto 3 - GabiKids -->
         <div class="project-card reveal" data-tilt>
-          <div class="project-badge">Backend</div>
+          <div class="project-badge">Fullstack</div>
           <div class="project-glow"></div>
           <div class="project-header">
             <div class="project-icon">
@@ -418,46 +422,64 @@
               </svg>
             </div>
           </div>
-          <div class="project-links"></div>
-          <div class="project-preview-wrapper">
-            <img class="project-preview" src="img/ecommerce.png" alt="Preview MiniModa" loading="lazy">
+          <div class="project-links">
+            <a href="https://gabikids.vercel.app/" target="_blank" rel="noopener" class="project-link" aria-label="Ver projeto">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6" />
+                <polyline points="15 3 21 3 21 9" />
+                <line x1="10" y1="14" x2="21" y2="3" />
+              </svg>
+            </a>
           </div>
-          <h3 class="project-title">MiniModa &mdash; E-commerce Backend</h3>
+          <div class="project-preview-wrapper">
+            <img class="project-preview" src="img/gabikids.png" alt="Preview GabiKids" loading="lazy">
+          </div>
+          <h3 class="project-title">GabiKids &mdash; E-commerce Completo</h3>
           <p class="project-description">
-            Backend completo de e-commerce para loja de roupas infantis &mdash; autentica&ccedil;&atilde;o JWT, carrinho persistente,
-            painel administrativo e fluxo completo de pedidos.
+            E-commerce fullstack de moda infantil com pagamento via Mercado Pago (cart&atilde;o e Pix),
+            imagens no Cloudflare R2, painel admin e deploy em VPS pr&oacute;pria com Docker, Nginx e SSL.
           </p>
           <div class="project-tech">
             <span class="tech-tag">Java 17</span>
 <span class="tech-tag">Spring Boot 3</span>
 <span class="tech-tag">PostgreSQL</span>
+<span class="tech-tag">Mercado Pago</span>
+<span class="tech-tag">Cloudflare R2</span>
 <span class="tech-tag">JWT</span>
 <span class="tech-tag">Docker</span>
 <span class="tech-tag">Nginx</span>
-<span class="tech-tag">SSL</span>
 <span class="tech-tag">Flyway</span>
+<span class="tech-tag">JUnit 5</span>
           </div>
+          <a href="https://gabikids.vercel.app/" target="_blank" rel="noopener" class="project-cta">
+            Ver Projeto
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
           <div class="card-expanded">
             <div class="card-expanded-inner">
               <div class="card-exp-divider"></div>
               <div class="card-exp-section">
                 <h4>Sobre o projeto</h4>
-                <p>Backend completo de e-commerce para loja de roupas infantis. Cat&aacute;logo de produtos, carrinho persistente, dois n&iacute;veis de acesso (ADMIN e CLIENT) e fluxo completo de pedidos com controle de estados.</p>
+                <p>E-commerce completo para loja de moda infantil. Cat&aacute;logo de produtos com imagens hospedadas no Cloudflare R2, carrinho persistente, dois n&iacute;veis de acesso (ADMIN e CLIENT), fluxo completo de pedidos e pagamento integrado com Mercado Pago.</p>
               </div>
               <div class="card-exp-section">
                 <h4>Como funciona</h4>
-                <p>Pedidos seguem uma m&aacute;quina de estados (PENDING &rarr; CONFIRMED &rarr; SHIPPED &rarr; DELIVERED) via enum com transi&ccedil;&otilde;es permitidas embutidas. O admin gerencia produtos e categorias; o carrinho persiste entre sess&otilde;es.</p>
+                <p>Cliente navega pelo cat&aacute;logo, adiciona ao carrinho e finaliza com cart&atilde;o de cr&eacute;dito ou Pix via Checkout Transparente do Mercado Pago. Pedidos seguem m&aacute;quina de estados (PENDING &rarr; CONFIRMED &rarr; SHIPPED &rarr; DELIVERED). Admin gerencia produtos, categorias e pedidos.</p>
               </div>
               <div class="card-exp-section">
                 <h4>Decis&otilde;es t&eacute;cnicas</h4>
-                <p>Corre&ccedil;&atilde;o de IDOR com valida&ccedil;&atilde;o de ownership (padr&atilde;o 404-over-403). JWT refresh com claim de tipo para impedir uso indevido. Rate limiting com cache Caffeine. Ports &amp; Adapters para pagamento.</p>
+                <p>Auditoria completa de seguran&ccedil;a: valida&ccedil;&atilde;o de webhook via HMAC-SHA256, resolu&ccedil;&atilde;o de pedido por externalReference, valida&ccedil;&atilde;o de valor de pagamento, idempot&ecirc;ncia. IDOR corrigido com padr&atilde;o 404-over-403. JWT refresh com claim de tipo. Rate limiting com Caffeine. Deploy em VPS Hostinger com Docker Compose, Nginx e DuckDNS.</p>
               </div>
               <div class="card-exp-section">
                 <h4>Como foi desenvolver</h4>
-                <p>Projeto onde mais aprendi sobre seguran&ccedil;a. Entender IDOR, 404-over-403 e refresh token correto mudou como penso em autentica&ccedil;&atilde;o e autoriza&ccedil;&atilde;o em qualquer sistema.</p>
+                <p>Projeto onde mais evolu&iacute; em seguran&ccedil;a e integra&ccedil;&atilde;o de pagamento. Implementar Checkout Transparente do Mercado Pago com valida&ccedil;&atilde;o completa de webhook me ensinou como sistemas financeiros funcionam na pr&aacute;tica. A auditoria de seguran&ccedil;a mudou como penso em cada endpoint.</p>
               </div>
               <div class="card-exp-links">
-                <a href="https://github.com/eduardo-Ciudad/MiniModa" target="_blank" rel="noopener" class="btn btn-primary">GitHub</a>
+                <a href="https://gabikids.duckdns.org:8081" target="_blank" rel="noopener" class="btn btn-primary">Ver Projeto</a>
+                <a href="https://github.com/eduardo-Ciudad/GabiKids" target="_blank" rel="noopener" class="btn btn-outline">GitHub</a>
               </div>
             </div>
           </div>
@@ -703,10 +725,17 @@
               </div>
             </div>
             <div class="skill-item">
-              <div class="skill-info"><span class="skill-name">Render</span><span class="skill-level">Intermedi&#xE1;rio</span>
+              <div class="skill-info"><span class="skill-name">VPS / Nginx</span><span class="skill-level">Intermedi&#xE1;rio</span>
               </div>
               <div class="skill-bar">
-                <div class="skill-fill" data-width="70"></div>
+                <div class="skill-fill" data-width="75"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info"><span class="skill-name">GitHub Actions</span><span class="skill-level">B&aacute;sico+</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-fill" data-width="55"></div>
               </div>
             </div>
           </div>
@@ -760,6 +789,12 @@
         <span class="badge-pill">Swagger</span>
         <span class="badge-pill">Docker Compose</span>
         <span class="badge-pill">Bucket4j</span>
+        <span class="badge-pill">Nginx</span>
+        <span class="badge-pill">GitHub Actions</span>
+        <span class="badge-pill">Cloudflare R2</span>
+        <span class="badge-pill">Mercado Pago</span>
+        <span class="badge-pill">Let's Encrypt</span>
+        <span class="badge-pill">Anthropic API</span>
       </div>
     </div>
   </section>

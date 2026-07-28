@@ -163,8 +163,9 @@ document.querySelectorAll('a[href^="#"]').forEach(a => {
 const typedEl  = document.getElementById('typedText');
 const phrases  = [
   'Desenvolvedor Backend Java',
-  'Spring Boot Enthusiast',
+  'Spring Boot & PostgreSQL',
   'Construindo APIs Escaláveis',
+  'Deploy em VPS própria',
   'Disponível para Freelance',
   'Primeiro freelance entregue ✓',
 ];
